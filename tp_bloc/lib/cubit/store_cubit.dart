@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'store_state.dart';
+import 'package:store/cubit/store_state.dart';
 
 class StoreListCubit extends Cubit<List<StoreModel>> {
   final String url = "https://fakestoreapi.com/products";
