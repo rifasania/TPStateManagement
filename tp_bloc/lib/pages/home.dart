@@ -38,14 +38,14 @@ class _HomePageState extends State<HomePage> {
               }
 
               return ListView.builder(
-                itemCount: storeList.length,
-                itemBuilder: (context, index) {
-                  return Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Container(
+								itemCount: storeList.length,
+								itemBuilder: (context, index) {
+									return Card(
+										child: Padding(
+											padding: const EdgeInsets.all(8.0),
+											child: Row(
+												children: [
+													Container(
 														height: 150,
 														width: 100,
 														child: ClipRRect(
@@ -58,25 +58,25 @@ class _HomePageState extends State<HomePage> {
 																	: const Icon(Icons.image, size: 60),
 														),
 													),
-                          const SizedBox(width: 8), // Add SizedBox to create space between image and text
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(storeList[index].title, style: const TextStyle(fontWeight: FontWeight.bold),),
-                                Text('Price: \$${storeList[index].price}', style: const TextStyle(fontWeight: FontWeight.bold),),
-                                Text('${storeList[index].description}'),
-                                Text('Category: ${storeList[index].category}', style: const TextStyle(fontWeight: FontWeight.bold),),
-                                Text('Rating: ${storeList[index].rate} (${storeList[index].count} reviews)', style: const TextStyle(fontWeight: FontWeight.bold),),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
-                },
-              );
+													const SizedBox(width: 8), // Add SizedBox to create space between image and text
+													Expanded(
+														child: Column(
+															crossAxisAlignment: CrossAxisAlignment.start,
+															children: [
+																Text(storeList[index].title, style: const TextStyle(fontWeight: FontWeight.bold),),
+																Text('Price: \$${storeList[index].price}', style: const TextStyle(fontWeight: FontWeight.bold),),
+																Text('${storeList[index].description}'),
+																Text('Category: ${storeList[index].category}', style: const TextStyle(fontWeight: FontWeight.bold),),
+																Text('Rating: ${storeList[index].rate} (${storeList[index].count} reviews)', style: const TextStyle(fontWeight: FontWeight.bold),),
+															],
+														),
+													),
+												],
+											),
+										),
+									);
+								},
+							);
             },
           ),
         ),
